@@ -45,12 +45,12 @@ def create_current_account_table():
     cur.execute('''CREATE TABLE IF NOT EXISTS `current_account` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
     `date` date DEFAULT NULL,
-    `name` char(128) NOT NULL,
-    `description` text,
+    `name` char(255) NOT NULL,
+    `description` char(255) NOT NULL,
     `amount` decimal(12,2) NOT NULL,
     `currency` char(3) NOT NULL,
     PRIMARY KEY (`id`),
-    UNIQUE INDEX (`date`,`name`,`amount`,`currency`)
+    UNIQUE INDEX (`date`,`name`,`description`,`amount`,`currency`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;''')
     cur.close()
     db.commit()
@@ -105,6 +105,8 @@ def get_transactions(sg_client_id=SG_CLIENT_ID):
         names = csv_reader.next()
         for row in csv_reader:
             data.append(row)
+    driver.close()
+    driver.quit()
     # Push the data to mysql
     create_current_account_table()
     push_current_account_data(data)
