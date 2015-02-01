@@ -6,6 +6,7 @@ import codecs
 import csv
 import json
 import locale
+from Tkinter import *
 # Import selenium
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
@@ -112,8 +113,24 @@ def get_transactions(sg_client_id=SG_CLIENT_ID):
     push_current_account_data(data)
     return names, data
 
+# Explain the job
+message = Tk()
+message.title("Enter your credentials")
+Label(message, text="You will be directed to your bank website, enter your credentials and wait.").pack(padx=5, pady=5)
+Button(message, text="OK", command=lambda: message.destroy()).pack()
+message.wait_window(message)
+
+# Do the job
 names, data = get_transactions()
-with open('names.json','w') as names_file:
-    json.dump(names, names_file)
-with open('data.json','w') as data_file:
-    json.dump(data, data_file)
+
+# Warn the user the job is completed
+message = Tk()
+message.title("Transactions downloaded")
+Label(message, text="{} transactions were downloaded and pushed to the database".format(len(data))).pack(padx=5, pady=5)
+Button(message, text="OK", command=lambda: message.destroy()).pack()
+message.wait_window(message)
+
+# with open('names.json','w') as names_file:
+#     json.dump(names, names_file)
+# with open('data.json','w') as data_file:
+#     json.dump(data, data_file)
