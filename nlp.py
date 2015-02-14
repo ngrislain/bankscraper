@@ -47,6 +47,12 @@ class Feature(object):
             self.features[word] = np.zeros(self.feature_size)
             self.features[word][i] += 1
             self.counts[word] = 1
+        if len(self.features)>100*self.vocabulary_size:
+            #print 'The {} words limit was reached'.format(len(self.features))
+            for key in sorted(self.counts, key=lambda k:-self.counts[k])[2*self.vocabulary_size:]:
+                del self.features[key]
+                del self.counts[key]
+            #print 'Reducing to {} words'.format(len(self.features))
     # Return the sorted list of words
     def get_words(self):
         return sorted(self.features, key=lambda k:-self.counts[k])[:self.vocabulary_size]
@@ -66,8 +72,8 @@ class Feature(object):
         return counts
 
 class Context(Feature):
-    def __init__(self):
-        Feature.__init__(self)
+    def __init__(self, vocabulary_size=5000, feature_size=10000):
+        Feature.__init__(self, vocabulary_size, feature_size)
         self.last_last_word = STOP
         self.last_word = STOP
         self.word = STOP
@@ -78,7 +84,9 @@ class Context(Feature):
         self.word = word
         self.add_feature(word, '_'.join((self.last_last_word, self.word)))    
 
-ctx = Context()
+vocabulary_size = 1000
+feature_size=10000
+ctx = Context(vocabulary_size, feature_size)
 
 i = 0
 for word in split('frwikisource-20141228-pages-meta-current.xml'):
@@ -86,4 +94,33 @@ for word in split('frwikisource-20141228-pages-meta-current.xml'):
     if i % 1000000 == 0:
         print i
     ctx.add(word)
-    
+
+
+ctx.get_words()
+ctx.get_counts()
+ctx.get_features()
+
+# pp.imshow(ctx.get_features())
+# pp.show()
+
+# pp.plot(ctx.get_features())
+# pp.show()
+
+F = np.matrix(ctx.get_features())
+D = F*F.T
+d = np.sqrt(np.diag(D))
+D = D/d.reshape((vocabulary_size, 1))/d.reshape((1, vocabulary_size))
+
+#pp.imshow(np.log(D))
+#pp.show()
+
+def get_closest(word, ctx):
+    return np.array(ctx.get_words())[np.argsort(-D.A[ctx.get_words().index(word),:])]
+
+def get_score(word, ctx):
+    return -np.sort(-D.A[ctx.get_words().index(word),:])
+
+for w in get_closest('bon', ctx)[:10]:
+    print w
+
+get_closest('bon', ctx)[:10]
