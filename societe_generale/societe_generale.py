@@ -30,7 +30,8 @@ def get_last_download(download_path=DOWNLOAD_PATH):
     results = []
     for file in os.listdir(download_path):
         if file.endswith(".tsv"):
-            results.append((os.path.join(download_path, file), time.ctime(os.path.getctime(os.path.join(download_path, file)))))
+            results.append((os.path.join(download_path, file), os.path.getctime(os.path.join(download_path, file))))
+    print results
     if len(results)>0:
         return max(results, key=lambda k:k[1])[0]
     else:
@@ -69,6 +70,7 @@ def push_current_account_data(data):
 
 def get_transactions(sg_client_id=SG_CLIENT_ID):
     last_download = get_last_download()
+    print last_download
     # Init a Firefox browser
     profile = webdriver.FirefoxProfile()
     profile.set_preference('browser.download.panel.shown', True)
@@ -97,6 +99,7 @@ def get_transactions(sg_client_id=SG_CLIENT_ID):
     driver.find_element_by_css_selector('a[href="javascript:telecharger(this)"]').click()
     while get_last_download() == last_download:
         time.sleep(1)
+        print get_last_download()
     time.sleep(3)
     data = []
     with codecs.open(get_last_download(), 'r', 'latin_1') as csv_file:
