@@ -1,0 +1,1763 @@
+[DEFAULT]
+name = file____Users_nicolas_Git_personal_weboob_modules
+update = 201507241325
+maintainer = 
+signed = 1
+key_update = 201507241012
+
+[presseurop]
+version = 201507241012
+capabilities = GenericNewspaperModule CapMessages
+description = Presseurop website
+maintainer = Florent Fourcot <weboob@flo.fourcot.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[mangareader]
+version = 201507241012
+capabilities = CapGallery GenericComicReaderModule
+description = MangaReader manga reading website
+maintainer = Noé Rubinstein <noe.rubinstein@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[edf]
+version = 201507241012
+capabilities = CapBill CapCollection
+description = Edf website: French power provider
+maintainer = Christophe Gouiran <bechris13250@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[mangago]
+version = 201507241012
+capabilities = CapGallery GenericComicReaderModule
+description = Mangago manga reading site
+maintainer = Noé Rubinstein <noe.rubinstein@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[adecco]
+version = 201507241012
+capabilities = CapJob
+description = adecco website
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = <unspecified>
+icon = 
+urls = 
+
+[indeed]
+version = 201507241012
+capabilities = CapJob
+description = indeed website
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[googletranslate]
+version = 201507241012
+capabilities = CapTranslate
+description = Google translation web service
+maintainer = Lucien Loiseau <loiseau.lucien@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[seloger]
+version = 201507241012
+capabilities = CapHousing
+description = French housing website
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = http://static.poliris.com/z/portail/svx/portals/sv6_gen/favicon.png
+urls = 
+
+[francetelevisions]
+version = 201507241012
+capabilities = CapVideo CapCollection CapFile CapImage
+description = France Télévisions video website
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[btmon]
+version = 201507241012
+capabilities = CapTorrent
+description = BTMon BitTorrent database
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[apivie]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Apivie
+maintainer = Romain Bignon <romain@weboob.org>
+license = <unspecified>
+icon = 
+urls = 
+
+[barclays]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Barclays
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[sueurdemetal]
+version = 201507241012
+capabilities = CapCollection CapCalendarEvent
+description = SueurDeMetal French concerts list website
+maintainer = Vincent A <dev@indigo.re>
+license = AGPLv3+
+icon = 
+urls = 
+
+[phpbb]
+version = 201507241012
+capabilities = CapMessagesPost CapMessages
+description = phpBB forum
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[marmiton]
+version = 201507241012
+capabilities = CapRecipe
+description = Marmiton French recipe website
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[nectarine]
+version = 201507241012
+capabilities = CapRadio CapCollection
+description = Nectarine Demoscene Radio
+maintainer = Thomas Lecavelier <thomas-weboob@lecavelier.name>
+license = AGPLv3+
+icon = 
+urls = 
+
+[vlille]
+version = 201507241012
+capabilities = CapGauge
+description = Lille bike renting availability information
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = <unspecified>
+icon = 
+urls = 
+
+[aum]
+version = 201507241012
+capabilities = CapContact CapMessages CapDating CapChat CapMessagesPost CapAccount
+description = "Adopte un Mec" French dating website
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[chronopost]
+version = 201507241012
+capabilities = CapParcel
+description = Chronopost website
+maintainer = Romain Bignon <romain@weboob.org>
+license = <unspecified>
+icon = 
+urls = 
+
+[liberation]
+version = 201507241012
+capabilities = GenericNewspaperModule CapMessages
+description = Libération newspaper website
+maintainer = Florent Fourcot <weboob@flo.fourcot.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[apec]
+version = 201507241012
+capabilities = CapJob
+description = apec website
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = <unspecified>
+icon = 
+urls = 
+
+[orange]
+version = 201507241012
+capabilities = CapMessages CapMessagesPost CapAccount
+description = Orange French mobile phone provider
+maintainer = Nicolas Duhamel <nicolas@jombi.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[jacquieetmichel]
+version = 201507241012
+capabilities = CapVideo CapCollection CapFile CapImage
+description = Jacquie et Michel TV
+maintainer = Roger Philibert <roger.philibert@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[ipapi]
+version = 201507241012
+capabilities = CapGeolocIp
+description = IP-API Geolocation API
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[simplyreadit]
+version = 201507241012
+capabilities = CapGallery GenericComicReaderModule
+description = SimplyReadIt manga reading website
+maintainer = Noé Rubinstein <noe.rubinstein@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[dailymotion]
+version = 201507241012
+capabilities = CapVideo CapCollection CapFile CapImage
+description = Dailymotion video streaming website
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[ouifm]
+version = 201507241012
+capabilities = CapRadio CapCollection
+description = OÜI FM French radio
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[mailinator]
+version = 201507241012
+capabilities = CapMessages
+description = mailinator temp mailbox
+maintainer = Vincent A <dev@indigo.re>
+license = AGPLv3+
+icon = 
+urls = 
+
+[freegeoip]
+version = 201507241012
+capabilities = CapGeolocIp
+description = public API to search the geolocation of IP addresses
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[seeklyrics]
+version = 201507241012
+capabilities = CapLyrics
+description = SeekLyrics lyrics website
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[amazon]
+version = 201507241012
+capabilities = CapCollection CapShop
+description = Amazon
+maintainer = Oleg Plakhotniuk <olegus8@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[colissimo]
+version = 201507241012
+capabilities = CapParcel
+description = Colissimo parcel tracking website
+maintainer = Florent Fourcot <weboob@flo.fourcot.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[oney]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Oney
+maintainer = Vincet Paredes <vparedes@budget-insight.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[lcl]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = LCL
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[fourchan]
+version = 201507241012
+capabilities = CapMessages
+description = 4chan image board
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[amazonstorecard]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Amazon Store Card
+maintainer = Oleg Plakhotniuk <olegus8@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[mediawiki]
+version = 201507241012
+capabilities = CapContent
+description = Wikis running MediaWiki, like Wikipedia
+maintainer = Clément Schreiner <clemux@clemux.info>
+license = AGPLv3+
+icon = 
+urls = 
+
+[jvmalin]
+version = 201507241012
+capabilities = CapTravel
+description = Multimodal public transportation for whole Région Centre, France
+maintainer = Alexandre Lissy <github@lissy.me>
+license = AGPLv3+
+icon = 
+urls = 
+
+[champslibres]
+version = 201507241012
+capabilities = CapBook CapCollection
+description = Champs Libres (Rennes) Library
+maintainer = Florent Fourcot <weboob@flo.fourcot.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[meteofrance]
+version = 201507241012
+capabilities = CapWeather
+description = Get forecasts from the MeteoFrance website
+maintainer = Cedric Defortis <cedric@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[citibank]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Citibank
+maintainer = Oleg Plakhotniuk <olegus8@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[cmb]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Crédit Mutuel de Bretagne
+maintainer = Johann Broudin <Johann.Broudin@6-8.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[pastealacon]
+version = 201507241012
+capabilities = CapPaste BasePasteModule
+description = Paste à la con text sharing tool
+maintainer = Laurent Bachelier <laurent@bachelier.name>
+license = AGPLv3+
+icon = 
+urls = 
+
+[dpd]
+version = 201507241012
+capabilities = CapParcel
+description = DPD website
+maintainer = Matthieu Weber <mweber+weboob@free.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[imgur]
+version = 201507241012
+capabilities = CapPaste
+description = imgur image upload service
+maintainer = Vincent A <dev@indigo.re>
+license = AGPLv3+
+icon = 
+urls = 
+
+[inrocks]
+version = 201507241012
+capabilities = GenericNewspaperModule CapMessages
+description = Les Inrocks French news website
+maintainer = Julien Hebert <juke@free.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[mangahere]
+version = 201507241012
+capabilities = CapGallery GenericComicReaderModule
+description = Manga Here manga reading website
+maintainer = Noé Rubinstein <noe.rubinstein@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[ups]
+version = 201507241012
+capabilities = CapParcel
+description = UPS website
+maintainer = Romain Bignon <romain@weboob.org>
+license = <unspecified>
+icon = 
+urls = 
+
+[mangafox]
+version = 201507241012
+capabilities = CapGallery GenericComicReaderModule
+description = Manga Fox manga reading website
+maintainer = Noé Rubinstein <noe.rubinstein@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[cuisineaz]
+version = 201507241012
+capabilities = CapRecipe
+description = Cuisine AZ French recipe website
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[vicsec]
+version = 201507241012
+capabilities = CapCollection CapShop
+description = Victoria's Secret
+maintainer = Oleg Plakhotniuk <olegus8@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[vine]
+version = 201507241012
+capabilities = CapVideo CapFile CapImage
+description = vine website
+maintainer = P4ncake <me@p4ncake.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[nolifetv]
+version = 201507241012
+capabilities = CapVideo CapCollection CapFile CapImage
+description = NolifeTV French video streaming website
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[ideel]
+version = 201507241012
+capabilities = CapCollection CapShop
+description = Ideel
+maintainer = Oleg Plakhotniuk <olegus8@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[kickass]
+version = 201507241012
+capabilities = CapTorrent
+description = Kickass Torrents BitTorrent tracker
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[batoto]
+version = 201507241012
+capabilities = CapGallery GenericComicReaderModule
+description = Batoto manga reading website
+maintainer = Noé Rubinstein <noe.rubinstein@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[jcvelaux]
+version = 201507241012
+capabilities = CapGauge
+description = City bike renting availability information.
+	Cities: Paris, Rouen, Toulouse, Luxembourg, Valence, Stockholm, Goteborg, Santander, Amiens, Lillestrom, Mulhouse, Lyon, Ljubljana, Seville, Namur, Nancy, Creteil, Bruxelles-Capitale, Cergy-Pontoise, Vilnius, Toyama, Kazan, Marseille, Nantes, Besancon
+maintainer = Herve Werner <dud225@hotmail.com>
+license = AGPLv3
+icon = 
+urls = 
+
+[arretsurimages]
+version = 201507241012
+capabilities = CapVideo CapCollection CapFile CapImage
+description = arretsurimages website
+maintainer = franek <franek@chicour.net>
+license = <unspecified>
+icon = 
+urls = 
+
+[delubac]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Banque Delubac & Cie
+maintainer = Noe Rubinstein <nru@budget-insight.com>
+license = <unspecified>
+icon = 
+urls = 
+
+[axabanque]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = AXA Banque
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[prixcarburants]
+version = 201507241012
+capabilities = CapPriceComparison
+description = French governement website to compare fuel prices
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[somafm]
+version = 201507241012
+capabilities = CapRadio CapCollection
+description = SomaFM web radio
+maintainer = Roger Philibert <roger.philibert@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[bforbank]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = BforBank
+maintainer = Baptiste Delpey <b.delpey@hotmail.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[pariskiwi]
+version = 201507241012
+capabilities = CapCollection CapCalendarEvent
+description = ParisKiwi website
+maintainer = Vincent A <dev@indigo.re>
+license = AGPLv3+
+icon = 
+urls = 
+
+[mareeinfo]
+version = 201507241012
+capabilities = CapGauge
+description = Un module qui permet d' aller a la pêche aux moules totalement informé
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[parolesnet]
+version = 201507241012
+capabilities = CapLyrics
+description = paroles.net lyrics website
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[ilmatieteenlaitos]
+version = 201507241012
+capabilities = CapWeather
+description = Get forecasts from the Ilmatieteenlaitos.fi website
+maintainer = Matthieu Weber <mweber+weboob@free.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[tinder]
+version = 201507241012
+capabilities = CapDating CapMessagesPost CapMessages
+description = Tinder dating mobile application
+maintainer = Roger Philibert <roger.philibert@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[gdcvault]
+version = 201507241012
+capabilities = CapVideo CapCollection CapFile CapImage
+description = Game Developers Conferences Vault video streaming website
+maintainer = François Revol <revol@free.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[monster]
+version = 201507241012
+capabilities = CapJob
+description = monster website
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[lacentrale]
+version = 201507241012
+capabilities = CapPriceComparison
+description = Vehicule prices at LaCentrale.fr
+maintainer = Vicnet <vo.publique@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[btdigg]
+version = 201507241012
+capabilities = CapTorrent
+description = The BitTorrent DHT search engine.
+maintainer = Matthieu Rakotojaona <matthieu.rakotojaona@gmail.com>
+license = CC0
+icon = 
+urls = 
+
+[europarl]
+version = 201507241012
+capabilities = CapVideo CapCollection CapFile CapImage
+description = Europarl parliamentary video streaming website
+maintainer = François Revol <revol@free.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[grooveshark]
+version = 201507241012
+capabilities = CapCollection CapFile CapAudio
+description = Grooveshark music streaming website
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[bp]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = La Banque Postale
+maintainer = Nicolas Duhamel <nicolas@jombi.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[wellsfargo]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Wells Fargo
+maintainer = Oleg Plakhotniuk <olegus8@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[creditcooperatif]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Crédit Coopératif
+maintainer = Kevin Pouget <weboob@kevin.pouget.me>
+license = AGPLv3+
+icon = 
+urls = 
+
+[transilien]
+version = 201507241012
+capabilities = CapTravel
+description = Public transportation in the Paris area
+maintainer = Julien Hébert <juke@free.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[kiwibank]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Kiwibank
+maintainer = Cédric Félizard <cedric@felizard.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[ameli]
+version = 201507241012
+capabilities = CapBill CapCollection
+description = Ameli website: French Health Insurance
+maintainer = Christophe Lampin <weboob@lampin.net>
+license = AGPLv3+
+icon = 
+urls = 
+
+[vicseccard]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Victoria's Secret Angel Card
+maintainer = Oleg Plakhotniuk <olegus8@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[parolesmusique]
+version = 201507241012
+capabilities = CapLyrics
+description = paroles-musique lyrics website
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[alloresto]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Allo Resto
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[senscritique]
+version = 201507241012
+capabilities = CapCollection CapCalendarEvent
+description = senscritique website
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[itella]
+version = 201507241012
+capabilities = CapParcel
+description = Itella website
+maintainer = Matthieu Weber <mweber+weboob@free.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[boursorama]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Boursorama
+maintainer = Gabriel Kerneis <gabriel@kerneis.info>
+license = AGPLv3+
+icon = 
+urls = 
+
+[gls]
+version = 201507241012
+capabilities = CapParcel
+description = GLS website
+maintainer = Matthieu Weber <mweber+weboob@free.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[geolocip]
+version = 201507241012
+capabilities = CapGeolocIp
+description = GeolocIP IP addresses geolocation service
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[audioaddict]
+version = 201507241012
+capabilities = CapRadio CapCollection
+description = Internet radios powered by audioaddict.com services
+maintainer = Pierre Mazière <pierre.maziere@gmx.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[creditmutuel]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Crédit Mutuel
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[dlfp]
+version = 201507241012
+capabilities = CapContent CapMessagesPost CapMessages
+description = Da Linux French Page news website
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[gazelle]
+version = 201507241012
+capabilities = CapTorrent
+description = Gazelle-based BitTorrent trackers
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[canalplus]
+version = 201507241012
+capabilities = CapVideo CapCollection CapFile CapImage
+description = Canal Plus French TV
+maintainer = Nicolas Duhamel <nicolas@jombi.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[ipinfodb]
+version = 201507241012
+capabilities = CapGeolocIp
+description = IPInfoDB IP addresses geolocation service
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[nettokom]
+version = 201507241012
+capabilities = CapBill CapCollection
+description = Nettokom website
+maintainer = Florent Fourcot <weboob@flo.fourcot.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[pastebin]
+version = 201507241012
+capabilities = CapPaste BasePasteModule
+description = Pastebin text sharing service
+maintainer = Laurent Bachelier <laurent@bachelier.name>
+license = AGPLv3+
+icon = 
+urls = 
+
+[cragr]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Crédit Agricole
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[weather]
+version = 201507241012
+capabilities = CapWeather
+description = Get forecasts from weather.com
+maintainer = Arno Renevier <arno@renevier.net>
+license = AGPLv3+
+icon = 
+urls = 
+
+[hybride]
+version = 201507241012
+capabilities = CapCollection CapCalendarEvent
+description = hybride website
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[parolesmania]
+version = 201507241012
+capabilities = CapLyrics
+description = Paroles Mania lyrics website
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[quvi]
+version = 201507241012
+capabilities = CapVideo CapFile CapImage
+description = Multi-website video helper with quvi. Handles Youtube, BBC, and a lot more
+maintainer = Vincent A <dev@indigo.re>
+license = AGPLv3+
+icon = 
+urls = 
+
+[poivy]
+version = 201507241012
+capabilities = CapBill CapCollection
+description = Poivy website
+maintainer = Florent Fourcot <weboob@flo.fourcot.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[bouygues]
+version = 201507241012
+capabilities = CapMessagesPost CapMessages
+description = Bouygues Télécom French mobile phone provider
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[canaltp]
+version = 201507241012
+capabilities = CapTravel
+description = French trains
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[popolemploi]
+version = 201507241012
+capabilities = CapJob
+description = Pole Emploi website
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = <unspecified>
+icon = 
+urls = 
+
+[happn]
+version = 201507241012
+capabilities = CapDating CapMessagesPost CapContact CapMessages
+description = Happn dating mobile application
+maintainer = Roger Philibert <roger.philibert@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[freemobile]
+version = 201507241012
+capabilities = CapBill CapCollection
+description = Free Mobile website
+maintainer = Florent Fourcot <weboob@flo.fourcot.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[trictractv]
+version = 201507241012
+capabilities = CapVideo CapFile CapImage
+description = TricTrac.tv video website
+maintainer = Benjamin Drieu <benjamin@drieu.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[carrefourbanque]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Carrefour Banque
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[nova]
+version = 201507241012
+capabilities = CapRadio CapCollection
+description = Nova French radio
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[amelipro]
+version = 201507241012
+capabilities = CapBill CapCollection
+description = Ameli website: French Health Insurance for Professionals
+maintainer = Christophe Lampin <weboob@lampin.net>
+license = AGPLv3+
+icon = 
+urls = 
+
+[logicimmo]
+version = 201507241012
+capabilities = CapHousing
+description = logicimmo website
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[opensubtitles]
+version = 201507241012
+capabilities = CapSubtitle
+description = Opensubtitles subtitle website
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[leclercmobile]
+version = 201507241012
+capabilities = CapBill CapCollection
+description = Leclerc Mobile website
+maintainer = Florent Fourcot <weboob@flo.fourcot.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[arte]
+version = 201507241012
+capabilities = CapVideo CapCollection CapFile CapImage
+description = Arte French and German TV
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[virginradio]
+version = 201507241012
+capabilities = CapRadio CapCollection
+description = VirginRadio french radio
+maintainer = Johann Broudin <Johann.Broudin@6-8.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[redmine]
+version = 201507241012
+capabilities = CapCollection CapBugTracker CapContent
+description = The Redmine project management web application
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[residentadvisor]
+version = 201507241012
+capabilities = CapCollection CapCalendarEvent
+description = residentadvisor website
+maintainer = Alexandre Morignot <erdnaxeli@cervoi.se>
+license = AGPLv3+
+icon = 
+urls = 
+
+[twitter]
+version = 201507241012
+capabilities = CapCollection CapMessagesPost CapMessages
+description = twitter website
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[bnporc]
+version = 201507241012
+capabilities = CapCollection CapBank CapMessages
+description = BNP Paribas
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[allocine]
+version = 201507241012
+capabilities = CapVideo CapCollection CapCalendarEvent CapImage CapCinema CapFile
+description = AlloCiné French cinema database service
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[caissedepargne]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Caisse d'Épargne
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[paypal]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = PayPal
+maintainer = Laurent Bachelier <laurent@bachelier.name>
+license = AGPLv3+
+icon = 
+urls = 
+
+[yahoo]
+version = 201507241012
+capabilities = CapWeather
+description = Yahoo!
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[ehentai]
+version = 201507241012
+capabilities = CapGallery CapCollection
+description = E-Hentai galleries
+maintainer = Roger Philibert <roger.philibert@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[creditdunord]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Crédit du Nord, Banque Courtois, Kolb, Tarneaud
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[youporn]
+version = 201507241012
+capabilities = CapVideo CapCollection CapFile CapImage
+description = YouPorn pornographic video streaming website
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[taz]
+version = 201507241012
+capabilities = GenericNewspaperModule CapMessages
+description = Taz newspaper website
+maintainer = Florent Fourcot <weboob@flo.fourcot.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[cmso]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Crédit Mutuel Sud-Ouest
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[biplan]
+version = 201507241012
+capabilities = CapCollection CapCalendarEvent
+description = lebiplan.org website
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[feedly]
+version = 201507241012
+capabilities = CapCollection CapMessages
+description = handle the popular RSS reading service Feedly
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[cic]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = CIC
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[wordreference]
+version = 201507241012
+capabilities = CapTranslate
+description = Free online translator
+maintainer = Lucien Loiseau <loiseau.lucien@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[hds]
+version = 201507241012
+capabilities = CapMessages
+description = Histoires de Sexe French erotic novels
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[dresdenwetter]
+version = 201507241012
+capabilities = CapGauge
+description = Private wetter station Dresden
+maintainer = Florent Fourcot <weboob@flo.fourcot.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[vimeo]
+version = 201507241012
+capabilities = CapVideo CapCollection CapFile CapImage
+description = Vimeo video streaming website
+maintainer = François Revol <revol@free.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[guerrillamail]
+version = 201507241012
+capabilities = CapMessagesPost CapMessages
+description = GuerrillaMail temp mailbox
+maintainer = Vincent A <dev@indigo.re>
+license = AGPLv3+
+icon = 
+urls = 
+
+[hsbc]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = HSBC France
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[ebonics]
+version = 201507241012
+capabilities = CapTranslate
+description = English to Ebonics translation service
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[supertoinette]
+version = 201507241012
+capabilities = CapRecipe
+description = Super Toinette, la cuisine familiale French recipe website
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[piratebay]
+version = 201507241012
+capabilities = CapTorrent
+description = The Pirate Bay BitTorrent tracker
+maintainer = Laurent Bachelier <laurent@bachelier.name>
+license = AGPLv3+
+icon = 
+urls = 
+
+[explorimmo]
+version = 201507241012
+capabilities = CapHousing
+description = explorimmo website
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[imdb]
+version = 201507241012
+capabilities = CapCinema
+description = Internet Movie Database service
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[rmll]
+version = 201507241012
+capabilities = CapVideo CapCollection CapFile CapImage
+description = Videos from RMLL
+maintainer = Guyou <guilhem.bonnefille@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[radiofrance]
+version = 201507241012
+capabilities = CapRadio CapFile CapAudio CapCollection
+description = Radios of Radio France: Inter, Info, Bleu, Culture, Musique, FIP, Le Mouv'
+maintainer = Laurent Bachelier <laurent@bachelier.name>
+license = AGPLv3+
+icon = 
+urls = 
+
+[opacwebaloes]
+version = 201507241012
+capabilities = CapBook CapCollection
+description = Aloes Library software
+maintainer = Jeremy Monnet <jmonnet@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[izneo]
+version = 201507241012
+capabilities = CapGallery
+description = Izneo digital comics
+maintainer = Roger Philibert <roger.philibert@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[fortuneo]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Fortuneo
+maintainer = Gilles-Alexandre Quenot <gilles.quenot@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[nihonnooto]
+version = 201507241012
+capabilities = CapRadio CapCollection
+description = « Le son du Japon » french operated web radio, diffusing japanese music
+maintainer = Thomas Lecavelier <thomas-weboob@lecavelier.name>
+license = AGPLv3+
+icon = 
+urls = 
+
+[allrecipes]
+version = 201507241012
+capabilities = CapRecipe
+description = Allrecipes English recipe website
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[americanexpress]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = American Express
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[cappedtv]
+version = 201507241012
+capabilities = CapVideo CapCollection CapFile CapImage
+description = Capped.tv demoscene website
+maintainer = Lord <lord@lordtoniok.com>
+license = WTFPLv2
+icon = 
+urls = 
+
+[ing]
+version = 201507241012
+capabilities = CapBill CapCollection CapBank
+description = ING Direct
+maintainer = Florent Fourcot <weboob@flo.fourcot.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[ina]
+version = 201507241012
+capabilities = CapVideo CapFile CapImage
+description = INA French TV video archives
+maintainer = Christophe Benz <christophe.benz@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[attilasub]
+version = 201507241012
+capabilities = CapSubtitle
+description = "Attila's Website 2.0" French subtitles
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[pap]
+version = 201507241012
+capabilities = CapHousing
+description = French housing website
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[minutes20]
+version = 201507241012
+capabilities = GenericNewspaperModule CapMessages
+description = 2 Minutes French newspaper website
+maintainer = Julien Hebert <juke@free.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[banqueaccord]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Banque Accord
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[750g]
+version = 201507241012
+capabilities = CapRecipe
+description = 750g French recipe website
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[leboncoin]
+version = 201507241012
+capabilities = CapHousing
+description = search house on leboncoin website
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[s2e]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Esalia, Capeasi, BNP PERE, HSBC ERE
+maintainer = Christophe Lampin <weboob@lampin.net>
+license = AGPLv3+
+icon = 
+urls = 
+
+[eatmanga]
+version = 201507241012
+capabilities = CapGallery GenericComicReaderModule
+description = EatManga manga reading website
+maintainer = Noé Rubinstein <noe.rubinstein@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[societegenerale]
+version = 201507241144
+capabilities = CapCollection CapBank
+description = Société Générale
+maintainer = Jocelyn Jaubert <jocelyn.jaubert@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[tvsubtitles]
+version = 201507241012
+capabilities = CapSubtitle
+description = Tvsubtitles subtitle website
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[playme]
+version = 201507241012
+capabilities = CapAccount CapDating CapMessagesPost CapMessages
+description = PlayMe dating mobile application
+maintainer = Roger Philibert <roger.philibert@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[groupamaes]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Groupama Épargne Salariale
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[entreparticuliers]
+version = 201507241012
+capabilities = CapHousing
+description = entreparticuliers.com website
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[citelis]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Citélis
+maintainer = Laurent Bachelier <laurent@bachelier.name>
+license = AGPLv3+
+icon = 
+urls = 
+
+[ovs]
+version = 201507241012
+capabilities = CapMessagesPost CapContact CapMessages
+description = OnVaSortir website. Handles private messages only
+maintainer = Vincent A <dev@indigo.re>
+license = <unspecified>
+icon = 
+urls = 
+
+[banquepopulaire]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Banque Populaire
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[razibus]
+version = 201507241012
+capabilities = CapCollection CapCalendarEvent
+description = site annonçant les évènements attendus par les punks a chiens
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[voyagessncf]
+version = 201507241012
+capabilities = CapTravel
+description = Voyages SNCF
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[pixtoilelibre]
+version = 201507241012
+capabilities = CapPaste
+description = toile-libre image hosting website
+maintainer = Vincent A <dev@indigo.re>
+license = AGPLv3+
+icon = 
+urls = 
+
+[sfr]
+version = 201507241012
+capabilities = CapMessages CapMessagesPost CapAccount
+description = SFR French mobile phone provider
+maintainer = Christophe Benz <christophe.benz@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[dhl]
+version = 201507241012
+capabilities = CapParcel
+description = DHL website
+maintainer = Matthieu Weber <mweber+weboob@free.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[hellobank]
+version = 201507241012
+capabilities = CapCollection CapBank CapMessages
+description = Hello Bank!
+maintainer = Christophe Lampin <weboob@lampin.net>
+license = AGPLv3+
+icon = 
+urls = 
+
+[lefigaro]
+version = 201507241012
+capabilities = GenericNewspaperModule CapMessages
+description = Le Figaro French newspaper website
+maintainer = Julien Hebert <juke@free.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[github]
+version = 201507241012
+capabilities = CapBugTracker
+description = GitHub issues tracking
+maintainer = Vincent A <dev@indigo.re>
+license = AGPLv3+
+icon = 
+urls = 
+
+[ganassurances]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Groupama
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[myhabit]
+version = 201507241012
+capabilities = CapCollection CapShop
+description = MYHABIT
+maintainer = Oleg Plakhotniuk <olegus8@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[agendadulibre]
+version = 201507241012
+capabilities = CapCollection CapCalendarEvent
+description = agendadulibre website
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[lutim]
+version = 201507241012
+capabilities = CapPaste
+description = lutim website
+maintainer = Vincent A <dev@indigo.re>
+license = AGPLv3+
+icon = 
+urls = 
+
+[bred]
+version = 201507241012
+capabilities = CapCollection CapBank
+description = Bred
+maintainer = Romain Bignon <romain@weboob.org>
+license = AGPLv3+
+icon = 
+urls = 
+
+[youtube]
+version = 201507241012
+capabilities = CapVideo CapCollection CapFile CapImage
+description = YouTube video streaming website
+maintainer = Laurent Bachelier <laurent@bachelier.name>
+license = AGPLv3+
+icon = 
+urls = 
+
+[okc]
+version = 201507241012
+capabilities = CapDating CapMessagesPost CapContact CapMessages
+description = OkCupid dating website
+maintainer = Roger Philibert <roger.philibert@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[regionsjob]
+version = 201507241012
+capabilities = CapJob
+description = regionsjob website
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[unsee]
+version = 201507241012
+capabilities = CapPaste BasePasteModule
+description = unsee.cc expiring image hosting
+maintainer = Vincent A <dev@indigo.re>
+license = AGPLv3+
+icon = 
+urls = 
+
+[colisprive]
+version = 201507241012
+capabilities = CapParcel
+description = Colisprive parcel tracking website
+maintainer = Florent Fourcot <weboob@flo.fourcot.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[youjizz]
+version = 201507241012
+capabilities = CapVideo CapCollection CapFile CapImage
+description = YouJizz pornographic video streaming website
+maintainer = Roger Philibert <roger.philibert@gmail.com>
+license = AGPLv3+
+icon = 
+urls = 
+
+[podnapisi]
+version = 201507241012
+capabilities = CapSubtitle
+description = Podnapisi movies and tv series subtitle website
+maintainer = Julien Veyssier <julien.veyssier@aiur.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[cci]
+version = 201507241012
+capabilities = CapJob
+description = cci website
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[sachsen]
+version = 201507241012
+capabilities = CapGauge
+description = Level of Sachsen river
+maintainer = Florent Fourcot <weboob@flo.fourcot.fr>
+license = AGPLv3+
+icon = 
+urls = 
+
+[lolix]
+version = 201507241012
+capabilities = CapJob
+description = Lolix French free software employment website
+maintainer = Bezleputh <carton_ben@yahoo.fr>
+license = <unspecified>
+icon = 
+urls = 
+
+[newsfeed]
+version = 201507241012
+capabilities = CapMessages
+description = Loads RSS and Atom feeds from any website
+maintainer = Clément Schreiner <clemux@clemux.info>
+license = AGPLv3+
+icon = 
+urls = 
+
+[gdfsuez]
+version = 201507241012
+capabilities = CapBill CapCollection
+description = GDF-Suez French energy provider
+maintainer = Mathieu Jourdan <mathieu.jourdan@gresille.org>
+license = AGPLv3+
+icon = 
+urls = 
+
