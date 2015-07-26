@@ -1,3 +1,5 @@
+import schedule
+import logging
 import keyring
 # Some important environment variables
 from env import *
@@ -7,11 +9,11 @@ from weboob.capabilities.bank import CapBank
 # To access the database
 import MySQLdb as mysql
 
-class scraper(object):
+class Scraper(object):
     def __init__(self):
         self.create_account_table()
         self.create_transaction_table()
-    
+    # Get last transactions from holder account
     def scrape_accounts(self, holder):
         web = Weboob()
         web.load_backends(CapBank)
@@ -20,26 +22,25 @@ class scraper(object):
         backend.config['password'].set(keyring.get_password('fr.grislain.societegenerale.password', holder))
         # get accounts
         for account in backend.iter_accounts():
-            self.insert_account(account)
+            self.push_account(account)
             self.scrape_transactions(backend, account)
-    
+    # Get the transactions and push them
     def scrape_transactions(self, backend, account):
-        for transaction in backend.iter_history(account):
-            print transaction
-    
+        self.push_transactions(backend.iter_history(account), account)
+    # Create account
     def create_account_table(self):
         db = mysql.connect(host=DB_HOST, user=DB_USER, passwd=DB_PASSWORD, db=DB_NAME)
         cur = db.cursor()
         cur.execute('''CREATE TABLE IF NOT EXISTS `account` (
-        `id` int(32) NOT NULL,
+        `id` char(32) NOT NULL,
         `label` char(255) NOT NULL,
         `currency` char(3) NOT NULL,
-        PRIMARY KEY (`id`),
+        PRIMARY KEY (`id`)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8;''')
         cur.close()
         db.commit()
         db.close()
-    
+    # Create transaction
     def create_transaction_table(self):
         db = mysql.connect(host=DB_HOST, user=DB_USER, passwd=DB_PASSWORD, db=DB_NAME)
         cur = db.cursor()
@@ -49,7 +50,7 @@ class scraper(object):
         `label` char(255) NOT NULL,
         `description` char(255) NOT NULL,
         `amount` decimal(12,2) NOT NULL,
-        `account_id` int(32) NOT NULL,
+        `account_id` char(32) NOT NULL,
         PRIMARY KEY (`id`),
         FOREIGN KEY (`account_id`) REFERENCES account (`id`),
         UNIQUE INDEX (`date`,`label`,`description`,`amount`,`account_id`)
@@ -57,51 +58,51 @@ class scraper(object):
         cur.close()
         db.commit()
         db.close()
+    # Push account to db
+    def push_account(self, account):
+        db = mysql.connect(host=DB_HOST, user=DB_USER, passwd=DB_PASSWORD, db=DB_NAME)
+        cur = db.cursor()
+        cur.execute('''INSERT IGNORE INTO `account` (`id`, `label`, `currency`)
+        VALUES (%s, %s, %s)
+        ''', (account.id, account.label, account.currency))
+        cur.close()
+        db.commit()
+        db.close()
+    # Push transaction to db
+    def push_transactions(self, transactions, account):
+        db = mysql.connect(host=DB_HOST, user=DB_USER, passwd=DB_PASSWORD, db=DB_NAME)
+        cur = db.cursor()
+        cur.executemany('''INSERT IGNORE INTO `transaction` (`date`, `label`, `description`, `amount`, `account_id`)
+        VALUES (%s, %s, %s, %s, %s)
+        ''', [(transaction.date, transaction.category, transaction.raw, transaction.amount, account.id) for transaction in transactions])
+        cur.close()
+        db.commit()
+        db.close()
+    # Push legacy data
+    def push_old_transactions(self):
+        db = mysql.connect(host=DB_HOST, user=DB_USER, passwd=DB_PASSWORD, db=DB_NAME)
+        cur = db.cursor()
+        cur.execute('''SELECT `date`, `name`, `description`, `amount` FROM `current_account`''')
+        transactions = cur.fetchall()
+        cur.executemany('''INSERT IGNORE INTO `transaction` (`date`, `label`, `description`, `amount`, `account_id`)
+        VALUES (%s, %s, %s, %s, '0312500050278659')
+        ''', transactions)
+        cur.close()
+        db.commit()
+        db.close()
 
-s = scraper()
-s.scrape_accounts('nicolas')
-
-
-# # get history
-# for transaction in backend.iter_history(account):
-#     print transaction
-# 
-# transactions = list(backend.iter_history(account))
-# 
-# transactions[0].date
-# transactions[0].category
-# transactions[0].label
-# transactions[0].raw
-# transactions[0].amount
-# account.currency
-
-#`name`,`description`,`amount`,`currency`
-
-
- 
-def create_current_account_table():
-    db = MySQLdb.connect(host=DB_HOST, user=DB_USER, passwd=DB_PASSWD, db=DB_NAME)
-    cur = db.cursor()
-    cur.execute('''CREATE TABLE IF NOT EXISTS `current_account` (
-    `id` int(11) NOT NULL AUTO_INCREMENT,
-    `date` date DEFAULT NULL,
-    `name` char(255) NOT NULL,
-    `description` char(255) NOT NULL,
-    `amount` decimal(12,2) NOT NULL,
-    `currency` char(3) NOT NULL,
-    PRIMARY KEY (`id`),
-    UNIQUE INDEX (`date`,`name`,`description`,`amount`,`currency`)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;''')
-    cur.close()
-    db.commit()
-    db.close()
- 
-def push_current_account_data(data):
-    db = MySQLdb.connect(host=DB_HOST, user=DB_USER, passwd=DB_PASSWD, db=DB_NAME)
-    cur = db.cursor()
-    cur.executemany('''INSERT IGNORE INTO `current_account` (`date`, `name`, `description`, `amount`, `currency`)
-    VALUES (%s, %s, %s, %s, %s)
-    ''', [(datetime.strptime(row[0], '%d/%m/%Y').date(), row[1], row[2], locale.atof(row[3]), row[4]) for row in data])
-    cur.close()
-    db.commit()
-    db.close()
+if __name__ == "__main__":
+    logging.basicConfig(format='%(asctime)s %(message)s', level=logging.INFO)
+    logging.info('Starting scraper')
+    # Define the update function
+    def update():
+        logging.info('Scraping')
+        scraper = Scraper()
+        logging.info('Get transactions for nicolas')
+        scraper.scrape_accounts('nicolas')
+        logging.info('Get transactions for celine')
+        scraper.scrape_accounts('celine')
+    # Schedule updates
+    while True:
+        schedule.every().hour.do(update)
+        schedule.run_pending()
