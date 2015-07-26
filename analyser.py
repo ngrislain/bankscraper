@@ -51,7 +51,7 @@ CATEGORIES = [u'alimentation',
     u'vêtements PCT']
 
 # get client id
-CURSOR.execute("""SELECT date, name, description, amount FROM current_account""")
+CURSOR.execute("""SELECT date, label, description, amount FROM transaction WHERE account_id='0312500050278659' ORDER BY date""")
 data = CURSOR.fetchall()
 
 for date, name, description, amount in data:
