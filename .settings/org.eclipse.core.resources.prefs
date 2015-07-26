@@ -2,4 +2,5 @@ eclipse.preferences.version=1
 encoding//weboob/core/__init__.py=utf-8
 encoding//weboob/core/ouiboube.py=utf-8
 encoding//weboob/tools/backend.py=utf-8
+encoding/classifier.py=utf-8
 encoding/nlp.py=utf-8

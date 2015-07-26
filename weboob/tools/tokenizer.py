@@ -24,7 +24,7 @@ __all__ = ['ReTokenizer']
 
 class ReTokenizer(object):
     """
-    Simple regex-based tokenizer (AKA lexer or lexical analyser).
+    Simple regex-based tokenizer (AKA lexer or lexical classifier).
     Useful for PDF statements parsing.
 
     1. There's a lexing table consisting of type-regex tuples.

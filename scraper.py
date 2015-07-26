@@ -52,7 +52,7 @@ class Scraper(object):
         `amount` decimal(12,2) NOT NULL,
         `account_id` char(32) NOT NULL,
         PRIMARY KEY (`id`),
-        FOREIGN KEY (`account_id`) REFERENCES account (`id`),
+        FOREIGN KEY (`account_id`) REFERENCES `account` (`id`),
         UNIQUE INDEX (`date`,`label`,`description`,`amount`,`account_id`)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;''')
         cur.close()
