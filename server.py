@@ -30,14 +30,21 @@ class APIHandler(RequestHandler):
                 self.write(json.dumps([(id, label, description) for id, label, description in db.get_categories()]))
         elif request=='transaction':
             with Database() as db:
-                accounts = db.get_accounts()
-                if len(self.get_arguments('id'))>0:
-                    account = next(account for account in accounts if account[0]==self.get_arguments('id')[0])
-                elif len(self.get_arguments('label'))>0:
-                    account = next(account for account in accounts if account[1]==self.get_arguments('label')[0])
+                # Getting account
+                if len(self.get_arguments('account_id'))>0:
+                    account_id = self.get_arguments('account_id')[0]
+                elif len(self.get_arguments('account_label'))>0:
+                    account_id = next(account[0] for account in db.get_accounts() if account[1]==self.get_arguments('account_label')[0])
                 else:
-                    account = None
-                self.write(json.dumps([(date.isoformat(), label, description, float(amount), account_id) for id, date, label, description, amount, account_id in db.get_transactions(account)]))
+                    account_id = None
+                # Getting category
+                if len(self.get_arguments('category_id'))>0:
+                    category_id = self.get_arguments('category_id')[0]
+                elif len(self.get_arguments('category_label'))>0:
+                    category_id = next(account[0] for account in db.get_accounts() if account[1]==self.get_arguments('category_label')[0])
+                else:
+                    category_id = None
+                self.write(json.dumps([(date.isoformat(), label, description, float(amount), account_id, category) for id, date, label, description, amount, account_id, category in db.get_transactions(account_id, category_id)]))
     def post(self, request):
         if request=='transaction_category':
             print dir(self)

@@ -23,11 +23,21 @@ class Database(object):
         self.cur.execute('''SELECT * FROM `category`''')
         return self.cur.fetchall()
     # Get transactions
-    def get_transactions(self, account=None, category=None):
-        if account:
-            self.cur.execute('''SELECT `id`, `date`, `label`, `description`, `amount`, `account_id` FROM `transaction` WHERE `account_id`=%s ORDER BY `date`''', (account[0],))
-        else:
-            self.cur.execute('''SELECT `id`, `date`, `label`, `description`, `amount`, `account_id` FROM `transaction` ORDER BY `date`''')
+    def get_transactions(self, account_id=None, category_id=None):
+        where_conditions = []
+        ids = []
+        if account_id:
+            where_conditions.append('`transaction`.`account_id`=%s')
+            ids.append(account_id)
+        if category_id:
+            where_conditions.append('`transaction_category`.`category_id`=%s')
+            ids.append(int(category_id))
+        self.cur.execute('''SELECT `transaction`.`id`, `transaction`.`date`, `transaction`.`label`, `transaction`.`description`, `transaction`.`amount`, `transaction`.`account_id`, `category`.`label` FROM
+                `transaction`
+                LEFT JOIN `transaction_category` ON `transaction`.`id`=`transaction_category`.`transaction_id`
+                LEFT JOIN `category` ON `transaction_category`.`category_id`=`category`.`id`'''
+        +(' WHERE '+' AND '.join(where_conditions) if len(ids)>0 else '')
+        +''' ORDER BY `transaction`.`date`''', ids)
         return self.cur.fetchall()
     # Push transaction categories
     def push_transaction_categories(self, transaction_categories):

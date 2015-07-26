@@ -94,7 +94,7 @@ class Analyser(object):
         cur.close()
         db.commit()
         db.close()
-    # Push categories to db
+    # Push transaction categories to db
     def push_transaction_categories(self, transaction_categories):
         db = mysql.connect(host=DB_HOST, user=DB_USER, passwd=DB_PASSWORD, db=DB_NAME)
         cur = db.cursor()
