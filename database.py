@@ -27,11 +27,17 @@ class Database(object):
         where_conditions = []
         ids = []
         if account_id:
-            where_conditions.append('`transaction`.`account_id`=%s')
-            ids.append(account_id)
+            if account_id=='null':
+                where_conditions.append('`transaction`.`account_id` IS NULL')
+            else:
+                where_conditions.append('`transaction`.`account_id`=%s')
+                ids.append(account_id)
         if category_id:
-            where_conditions.append('`transaction_category`.`category_id`=%s')
-            ids.append(int(category_id))
+            if category_id=='null':
+                where_conditions.append('`transaction_category`.`category_id` IS NULL')
+            else:
+                where_conditions.append('`transaction_category`.`category_id`=%s')
+                ids.append(int(category_id))
         self.cur.execute('''SELECT `transaction`.`id`, `transaction`.`date`, `transaction`.`label`, `transaction`.`description`, `transaction`.`amount`, `transaction`.`account_id`, `category`.`label` FROM
                 `transaction`
                 LEFT JOIN `transaction_category` ON `transaction`.`id`=`transaction_category`.`transaction_id`

@@ -41,7 +41,7 @@ class APIHandler(RequestHandler):
                 if len(self.get_arguments('category_id'))>0:
                     category_id = self.get_arguments('category_id')[0]
                 elif len(self.get_arguments('category_label'))>0:
-                    category_id = next(account[0] for account in db.get_accounts() if account[1]==self.get_arguments('category_label')[0])
+                    category_id = next(category[0] for category in db.get_categories() if category[1]==self.get_arguments('category_label')[0])
                 else:
                     category_id = None
                 self.write(json.dumps([(date.isoformat(), label, description, float(amount), account_id, category) for id, date, label, description, amount, account_id, category in db.get_transactions(account_id, category_id)]))
