@@ -1,3 +1,4 @@
+from datetime import date
 import schedule
 import logging
 import keyring
@@ -13,6 +14,7 @@ class Scraper(object):
     def __init__(self):
         self.create_account_table()
         self.create_transaction_table()
+        self.create_account_balance()
     # Get last transactions from holder account
     def scrape_accounts(self, holder):
         web = Weboob()
@@ -23,6 +25,7 @@ class Scraper(object):
         # get accounts
         for account in backend.iter_accounts():
             self.push_account(account)
+            self.push_account_balance(account)
             self.scrape_transactions(backend, account)
     # Get the transactions and push them
     def scrape_transactions(self, backend, account):
@@ -37,6 +40,22 @@ class Scraper(object):
         `currency` char(3) NOT NULL,
         PRIMARY KEY (`id`)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8;''')
+        cur.close()
+        db.commit()
+        db.close()
+    # Create account balance
+    def create_account_balance(self):
+        db = mysql.connect(host=DB_HOST, user=DB_USER, passwd=DB_PASSWORD, db=DB_NAME)
+        cur = db.cursor()
+        cur.execute('''CREATE TABLE IF NOT EXISTS `account_balance` (
+        `id` int(16) NOT NULL AUTO_INCREMENT,
+        `account_id` char(32) NOT NULL,
+        `balance` decimal(12,2) NOT NULL,
+        `date` date DEFAULT NULL,
+        PRIMARY KEY (`id`),
+        FOREIGN KEY (`account_id`) REFERENCES `account` (`id`),
+        UNIQUE INDEX (`account_id`,`balance`,`date`)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;''')
         cur.close()
         db.commit()
         db.close()
@@ -65,6 +84,16 @@ class Scraper(object):
         cur.execute('''INSERT IGNORE INTO `account` (`id`, `label`, `currency`)
         VALUES (%s, %s, %s)
         ''', (account.id, account.label, account.currency))
+        cur.close()
+        db.commit()
+        db.close()
+    # Push account balance to db
+    def push_account_balance(self, account):
+        db = mysql.connect(host=DB_HOST, user=DB_USER, passwd=DB_PASSWORD, db=DB_NAME)
+        cur = db.cursor()
+        cur.execute('''INSERT IGNORE INTO `account_balance` (`account_id`, `balance`, `date`)
+        VALUES (%s, %s, %s)
+        ''', (account.id, account.balance, date.today()))
         cur.close()
         db.commit()
         db.close()

@@ -23,6 +23,15 @@ class Database(object):
         self.cur.execute('''SELECT * FROM `category`''')
         return self.cur.fetchall()
     # Get transactions
-    def get_transactions(self, account):
-        self.cur.execute('''SELECT `id`, `date`, `label`, `description`, `amount` FROM `transaction` WHERE `account_id`=%s ORDER BY `date`''', (account[0],))
+    def get_transactions(self, account=None, category=None):
+        if account:
+            self.cur.execute('''SELECT `id`, `date`, `label`, `description`, `amount`, `account_id` FROM `transaction` WHERE `account_id`=%s ORDER BY `date`''', (account[0],))
+        else:
+            self.cur.execute('''SELECT `id`, `date`, `label`, `description`, `amount`, `account_id` FROM `transaction` ORDER BY `date`''')
         return self.cur.fetchall()
+    # Push transaction categories
+    def push_transaction_categories(self, transaction_categories):
+        self.cur.executemany('''INSERT INTO `transaction_category` (`transaction_id`, `category_id`)
+        VALUES (%s, %s)
+        ''', transaction_categories)
+        return
