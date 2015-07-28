@@ -2,6 +2,7 @@
 var seriesOptions = [];
 var seriesCounter = 0;
 var account = '0312500050278659';
+var category = [];
 var cumulateTransactions = function (transactions) {
     var result = [];
     var last = 0;
@@ -50,9 +51,6 @@ var update = function () {
         $.each(categories, function (i, category) {
             $.getJSON('/api/transaction?account_id='+account+'&category_id='+category[0],
                       function (transactions) {
-                          console.log(category)
-                          console.log(i);
-                          console.log(cumulateTransactions(transactions));
                           // Setup series
                           seriesOptions[i] = {
                               name: category[1],
@@ -69,6 +67,23 @@ var update = function () {
         });
     });
 };
+// Managing categories submitting
+var check = function (transaction, category) {
+    if (category) {
+        $.get( '/api/transaction_category?q=insert&transaction='+transaction+'&category='+category, function( data ) {
+            $('#'+transaction+'-checked').text(category)
+            $('#'+transaction+'-checked').show();
+            $('#'+transaction+'-unchecked').hide();
+        });
+    }
+};
+var uncheck = function (transaction) {
+    $.get( '/api/transaction_category?q=delete&transaction='+transaction, function( data ) {
+        $('#'+transaction+'-checked').hide();
+        $('#'+transaction+'-unchecked').show();
+    });
+};
+// /api/transaction_category?q=insert&transaction=21340&category=3
 // Update after loading
 $(function () {
     // First update

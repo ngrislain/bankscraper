@@ -11,7 +11,7 @@ class HomeHandler(RequestHandler):
 class CategoriesHandler(RequestHandler):
     def get(self):
         with Database() as db:
-            self.render("server/categories.html", transactions=db.get_transactions())
+            self.render("server/categories.html", categories=db.get_categories(), transactions=db.get_transactions())
 
 class GraphsHandler(RequestHandler):
     def get(self):
@@ -45,12 +45,14 @@ class APIHandler(RequestHandler):
                 else:
                     category_id = None
                 self.write(json.dumps([(date.isoformat(), label, description, float(amount), account_id, category) for id, date, label, description, amount, account_id, category in db.get_transactions(account_id, category_id)]))
-    def post(self, request):
-        if request=='transaction_category':
-            print dir(self)
-            self.write("OK")
-
-
+        elif request=='transaction_category':
+            with Database() as db:
+                transaction = int(self.get_arguments('transaction')[0])
+                if self.get_arguments('q')[0]=='insert':
+                    category = int(self.get_arguments('category')[0])
+                    db.insert_transaction_category(transaction, category)
+                elif self.get_arguments('q')[0]=='delete':
+                    db.delete_transaction_category(transaction)
 
 if __name__ == "__main__":
     handlers = [

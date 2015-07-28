@@ -15,34 +15,48 @@
 {% block content %}
 <div class="panel">
   <h1>Set transaction categories</h1>
-  <table class="table table-hover">
-    <thead>
-      <tr>
-	    <th class="col-md-1">Date</th>
-	    <th class="col-md-2">Label</th> 
-	    <th class="col-md-6">Description</th>
-	    <th class="col-md-1">Amount</th>
-        <th class="col-md-2">Category</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for transaction in transactions %}
-      <tr>
-	    <td class="col-md-1">{{ transaction[0] }}</td>
-	    <td class="col-md-2">{{ transaction[1] }}</td> 
-	    <td class="col-md-6">{{ transaction[2] }}</td>
-	    <td class="col-md-1">{{ transaction[3] }}</td>
-        <td class="col-md-2 form-group">
-          <select class="form-control">
-            <option value="volvo">Volvo</option>
-            <option value="saab" selected="selected">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
-          </select>
-        </td>
-      </tr>
-      {% end %}
-    </tbody>
-  </table>
+  <div class="panel">
+    <button type="button" class="btn btn-danger btn-lg" onclick="submit()">Predict categories</button>
+  </div>
+  <div class="panel">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+	      <th class="col-md-1">Date</th>
+	      <th class="col-md-2">Label</th> 
+	      <th class="col-md-6">Description</th>
+	      <th class="col-md-1">Amount</th>
+          <th class="col-md-2">
+            Category
+            <input class="cat-chkl" type="checkbox"/>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for transaction in reversed(transactions) %}
+        <tr>
+	      <td class="col-md-1">{{transaction[1]}}</td>
+	      <td class="col-md-2">{{transaction[2]}}</td> 
+	      <td class="col-md-6">{{transaction[3]}}</td>
+	      <td class="col-md-1">{{transaction[4]}}</td>
+          <td class="category col-md-2" id="{{transaction[0]}}">
+            <div id="{{transaction[0]}}-checked" class="form-group form-inline form-group-sm" {% if not transaction[6] %}style="display:none"{% end %}>
+              <span class="validated">{{transaction[6]}}</span>
+              <button type="button" class="btn btn-primary btn-xs" onclick="uncheck({{transaction[0]}})">Uncheck</button>
+            </div>
+            <div id="{{transaction[0]}}-unchecked" class="form-group form-inline form-group-sm" {% if transaction[6] %}style="display:none"{% end %}>
+              <select class="form-control" onchange="category[{{transaction[0]}}]=this.value">
+                {% for category in categories %}
+                <option value="{{category[0]}}">{{category[1]}}</option>
+                {% end %}
+              </select>
+              <button type="button" class="btn btn-warning btn-xs" onclick="check({{transaction[0]}}, category[{{transaction[0]}}])">Check</button>
+            </div>
+          </td>
+        </tr>
+        {% end %}
+      </tbody>
+    </table>
+  </div>
 </div>
 {% end %}

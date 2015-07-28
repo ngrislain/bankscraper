@@ -46,8 +46,18 @@ class Database(object):
         +''' ORDER BY `transaction`.`date`''', ids)
         return self.cur.fetchall()
     # Push transaction categories
-    def push_transaction_categories(self, transaction_categories):
+    def insert_transaction_categories(self, transaction_categories):
         self.cur.executemany('''INSERT INTO `transaction_category` (`transaction_id`, `category_id`)
         VALUES (%s, %s)
         ''', transaction_categories)
+        return
+    def insert_transaction_category(self, transaction, category):
+        self.cur.execute('''INSERT INTO `transaction_category` (`transaction_id`, `category_id`)
+        VALUES (%s, %s) ON DUPLICATE KEY UPDATE `category_id`=VALUES(`category_id`)
+        ''', (transaction, category))
+        return
+    def delete_transaction_category(self, transaction):
+        self.cur.execute('''DELETE FROM `transaction_category`
+        WHERE `transaction_id`=%s
+        ''', (transaction,))
         return

@@ -131,6 +131,8 @@ if __name__ == "__main__":
         scraper.scrape_accounts('nicolas')
         logging.info('Get transactions for celine')
         scraper.scrape_accounts('celine')
+    # First update
+    update()
     # Schedule updates
     while True:
         schedule.every().hour.do(update)
