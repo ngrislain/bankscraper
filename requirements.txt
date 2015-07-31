@@ -1,0 +1,10 @@
+schedule
+keyring
+urllib3
+requests
+pyyaml
+prettytable
+mechanize
+lxml
+Pillow
+cssselect
