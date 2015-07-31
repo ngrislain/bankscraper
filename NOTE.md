@@ -1,5 +1,7 @@
 # How to start with bankscraper
 
-run `python setup install societegenerale` to be able to use the SG plugin
+Don't forget to install the requirements (see `requirements.txt`)
 
-run `python set_env.py` to set your credentials in the keyring
+Run `python setup install societegenerale` to be able to use the SG plugin
+
+Run `python set_env.py` to set your credentials in the keyring
